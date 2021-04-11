@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is  4 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id = "app">
+        {{a}}
+    </div>
+
+    <script type = "text/javascript">
+    var data1 = {a:1}
+    var vm = new Vue({
+         el:'#app',
+         data: data1
+     });
+     vm.$watch('a',function(newVal,oldVal){
+         console.log("开始",newVal,oldVal)
+     })
+     data1.a = "this is new=========88888888888888888888====="
+     vm.$data.a = "9999999999"
+     
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 10 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    
+    单选按钮
+    <div id="example-4">
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+      </div>
+      选择框
+      <div id="example-5">
+        <select v-model="selected">
+          <option disabled value="">请选择</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+      </div>
+      多选时 (绑定到一个数组)：
+      <div id="example-6">
+        <select v-model="selected" multiple style="width: 50px;">
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+        <br>
+        <span>Selected: {{ selected }}</span>
+      </div>
+    <script type="text/javascript">
+      varvm1 = new Vue({
+  el: '#example-4',
+  data: {
+    picked: '',
+    
+  }
+})
+varvm2 =new Vue({
+  el: '#example-5',
+  data: {
+    selected: ''
+  }
+})
+
+varvm3 =new Vue({
+  el: '#example-6',
+  data: {
+    selected: []
+  }
+})
+
+    </script>
+
+
+
+</body>
+
+</html>

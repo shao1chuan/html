@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 11 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id="app1">
+       <button v-on:click = "counter +=1">数值： {{counter}}</button>
+       <button v-on:click = "greet">Greet</button>
+       <button v-on:click = "greet2('abc')">Greet2</button>
+       <button v-on:dblclick = "greet3('abc',$event)">Greet3</button>
+    </div>
+
+    <script type="text/javascript">
+        varvm = new Vue({
+            el: "#app1",
+            data: {
+                counter:0,
+                name:'dddddd'
+            },
+            methods:{
+                greet:function(str){
+                    alert("hi")
+                    alert(this.name)
+                },
+                greet2:function(str){
+                    alert(str)
+                },
+                greet3:function(str,e){
+                    alert(str)
+                    console.log(e)
+                }
+            }
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>

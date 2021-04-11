@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 10 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id="app1">
+      单行文本输入
+      <input v-model = "message" placeholder = "edit me">
+      <p>Message is {{message}}</p>
+      多行文本
+      <textarea v-model = "message1" > </textarea>
+      <p>Message1 is {{message1}}</p>
+      复选框
+      <input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label>
+多个复选框，绑定到同一个数组：
+<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+<label for="jack">Jack</label>
+<input type="checkbox" id="john" value="John" v-model="checkedNames">
+<label for="john">John</label>
+<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+<label for="mike">Mike</label>
+<br>
+<span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <script type="text/javascript">
+        varvm = new Vue({
+            el: "#app1",
+            data: {
+                message:'',
+                message1:'',
+                checked:false,
+                checkedNames: []
+            }
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>

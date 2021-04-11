@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 5 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id = "app1">
+        {{message1}}
+        <p><span v-html = "name"></span></p>
+
+        <div v-bind:class = "color1">test8888888888888</div>
+        {{number+1}}
+        {{ok?"yes":"no"}}
+    </div>
+
+    <script type = "text/javascript">
+     var app = new Vue({
+         el:'#app1',
+         data:{
+             message1:" 你好中国sdfsdf",
+             name:" <span style = 'color:red'> 你好，你好</span> ",
+             color1:'blue',
+             ok:true,
+             number:10,
+         }
+     });
+
+    </script>
+
+    <style type = "text/css">
+    .red{color:red}
+    .blue{color:blue;font-size:100px;}
+
+    </style>
+
+</body>
+
+</html>

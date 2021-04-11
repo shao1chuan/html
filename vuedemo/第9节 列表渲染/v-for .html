@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 7 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id="app1">
+        <div>
+            {{items.a1}},{{items.a2}},{{items.a3}}
+        </div>
+        <div>
+          <ul>
+              <li v-for = "list,index in lists">
+                {{index}}:
+                  {{list.a1}}
+              </li>
+          </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li v-for = "value,key in values">
+                    {{key}}:{{value}}
+                </li>
+            </ul>
+          </div>
+
+    </div>
+
+    <script type="text/javascript">
+        varvm = new Vue({
+            el: "#app1",
+            data: {
+                items: {
+                    a1: 12,
+                    a2: 13,
+                    a3: 14
+                },
+                lists:
+                    [{ a1: 12 },
+                    { a1: 13 },
+                    { a1: 14 }],
+                values:{
+                    b1:111,
+                    b2:222,
+                    b3:333
+                }
+            }
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>

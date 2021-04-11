@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 7  网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    <div id = "app1">
+        <div 
+        class = "test" 
+        v-bind:class="{active:isActive}"
+        style = "width: 100px; height: 200px; text-align: center; line-height: 200px;" >
+    你好 你好</div>
+    </div>
+
+    <script type = "text/javascript">
+     varvm= new Vue({
+         el:"#app1",
+         data:{isActive:true}
+     })
+
+    </script>
+    <style>
+.test{font-size: 300px;}
+.active{background: #FF0000;}
+    </style>
+
+
+</body>
+
+</html>

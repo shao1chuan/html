@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta>
+    <title>
+        this is my 11 网页
+    </title>
+    <script src="../vue.js" type="text/javascript">      </script>
+</head>
+
+<body>
+    
+  用 v-for 渲染的动态选项：
+    <div id="example-4">
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <span>Selected: {{ selected }}</span>
+      </div>
+    <script type="text/javascript">
+     new Vue({
+  el: '#example-4',
+  data: {
+    selected: 'A',
+    options: [
+      { text: 'One', value: 'A' },
+      { text: 'Two', value: 'B' },
+      { text: 'Three', value: 'C' }
+    ]
+  }
+})
+
+    </script>
+
+
+
+</body>
+
+</html>
